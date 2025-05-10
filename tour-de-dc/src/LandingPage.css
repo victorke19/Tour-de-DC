@@ -1,0 +1,151 @@
+  body, html, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .landing-background {
+    min-height: 100vh;
+    width: 100vw;
+    background: url('/Users/admin/Desktop/Tour-de-DC/Tour-de-DC/tour-de-dc/public/dc-landscape.png') center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/*
+  .landing-background {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #FFEE00 100%, #EBB20A 0%);
+    position: relative;
+    font-family: 'Barrio', cursive;
+    overflow: hidden;
+  } */
+  
+  .overlay-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #FFEE00 100%, #EBB20A 0%);
+    border: 4px solid #1e3c72;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+ /* 
+    .header-container {
+    position: relative;
+    width: 100vw;
+    height: 33vh; 
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  } */
+  
+  .bikes-animation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 130px; /* adjust as needed */
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .bike {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    animation: bike-move-left 8s linear infinite;
+  }
+  
+  .bike:nth-child(2) { animation-delay: 1.5s; }
+  .bike:nth-child(3) { animation-delay: 3s; }
+  .bike:nth-child(4) { animation-delay: 4.5s; }
+  .bike:nth-child(5) { animation-delay: 6s; }
+  
+  @keyframes bike-move-left {
+    0% {
+      left: 100vw;
+    }
+    100% {
+      left: -800px;
+    }
+  }
+  
+
+  .live-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    font-size: 3em;
+  }
+  
+  .live-block h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .live-btn-container {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.15;
+    z-index: 0;
+  }
+  
+  .logo-img {
+    width: 400px;
+    max-width: 80vw;
+  }
+  
+  .landing-content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .enter-btn {
+    margin-top: 2em;
+    padding: 15px 50px;
+    font-size: 3em;
+    background: #ffcc29;
+    color: #1e3c72;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(30,60,114,0.2);
+    cursor: pointer;
+    font-family: 'Barrio', cursive;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+  
+  .enter-btn:hover {
+    background: #1e3c72;
+    color: #ffcc29;
+    transform: scale(1.05);
+  }
